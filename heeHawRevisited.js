@@ -6,23 +6,16 @@
     to the console and applies the heeHaw function to the list of numbers.
  */
 
-//creates the variable 'numbers' but does not yet define it
-//allowing for the variable to have global scope and thus be visible to
-//all the methods in this script
-var numbers;
-
 //prompts the user to pick a number (length for the number array)
-var length = prompt("Please enter a positive, whole number");
+var size = prompt("Please enter a positive, whole number");
                         //OR "Please set the size of the array, number list, etc..."
                         //"you would like to create."
 
-//initializes an empty array of unspecified length
-numbers = Array(length);
+//initializes an empty array of a length specified by user input
+var numbers = Array(size);
 
-function makeArray(/*length*/)
+function makeArray()
 {
-    //initializes an empty array of unspecified length
-    //numbers = Array(length);
 
     var i = 0;
 
@@ -50,5 +43,5 @@ function heeHaw(currentValue, index, numbers) {
     }
 
 }
-makeArray(/*length*/);
+makeArray();
 numbers.forEach(heeHaw);
