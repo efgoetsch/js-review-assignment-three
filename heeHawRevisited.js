@@ -15,10 +15,16 @@ var numbers;
 var length = prompt("Please enter a positive, whole number");
                         //OR "Please set the size of the array, number list, etc..."
                         //"you would like to create."
-function makeArray(length)
+
+//initializes an empty array of unspecified length
+numbers = Array(length);
+
+function makeArray(/*length*/)
 {
     //initializes an empty array of unspecified length
-    numbers = Array(length);
+    //numbers = Array(length);
+
+    var i = 0;
 
     for (i = 1; i <= numbers.length; i++) {
 
@@ -44,5 +50,5 @@ function heeHaw(currentValue, index, numbers) {
     }
 
 }
-makeArray(length);
+makeArray(/*length*/);
 numbers.forEach(heeHaw);
