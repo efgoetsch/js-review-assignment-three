@@ -11,15 +11,15 @@ var size = prompt("Please enter a positive, whole number");
                         //OR "Please set the size of the array, number list, etc..."
                         //"you would like to create."
 
-//initializes an empty array of a length specified by user input
-var numbers = Array(size);
+//initializes an empty array
+var numbers = [];
 
 function makeArray()
 {
-
+    //initializes a counter variable to keep track of how many times we have looped over the arra
     var i = 0;
 
-    for (i = 1; i <= numbers.length; i++) {
+    for (i = 1; i <= size; i++) {
 
         numbers.push(i);
     }
