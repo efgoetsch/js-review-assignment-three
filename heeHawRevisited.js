@@ -8,6 +8,8 @@
 
 //prompts the user to pick a number (length for the number array)
 var size = prompt("Please enter a positive, whole number");
+//parseInt() method converts data from string to integer where applicable
+size = parseInt(size);
 
 //initializes an empty array
 var numbers = [];
@@ -44,15 +46,14 @@ function heeHaw(currentValue, index, numbers) {
         }
 }
 
+//if the user input is not a number an error message is written to to console
+if(typeof size != "number")
+{
+    console.log("Invalid entry: Please enter a positive, whole integer!");
 
-
-if(!(Number.isNan(size)))
+}
+else
 {
     makeArray();
     numbers.forEach(heeHaw);
 }
-else
-{
-    console.log("Invalid entry: Please enter a positive, whole integer!");
-}
-
